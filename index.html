@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Крестики-Нолики</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="ajax.js" defer></script>
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="result" id="result-game"></div>
+            <span class="game-title" id="message">Ваш ход - первый</span>
+            <div id ="currentScore">Счёт: 2000</div>
+            <div class="game" id="game">
+                <div id="computerStep"></div>
+                <div class="game1" id="game1">
+                    <div class="game-item1" id="1" data-sell="11"></div>
+                    <div class="game-item1" id="2" data-sell="12"></div>
+                    <div class="game-item1" id="3" data-sell="13"></div>
+                    <div class="game-item1" id="4" data-sell="14"></div>
+                    <div class="game-item1" id="5" data-sell="15"></div>
+                    <div class="game-item1" id="6" data-sell="16"></div>
+                    <div class="game-item1" id="7" data-sell="17"></div>
+                    <div class="game-item1" id="8" data-sell="18"></div>
+                    <div class="game-item1" id="9" data-sell="19"></div>
+                    <div id="local1"></div>
+                    <div id="closed1"></div>
+
+                </div>
+
+                <div class="game2" id="game2">
+                    <div class="game-item2" id="10" data-sell="21"></div>
+                    <div class="game-item2" id ="11" data-sell="22"></div>
+                    <div class="game-item2" id="12" data-sell="23"></div>
+                    <div class="game-item2" id="13" data-sell="24"></div>
+                    <div class="game-item2" id="14" data-sell="25"></div>
+                    <div class="game-item2" id="15" data-sell="26"></div>
+                    <div class="game-item2" id="16" data-sell="27"></div>
+                    <div class="game-item2" id="17" data-sell="28"></div>
+                    <div class="game-item2" id="18" data-sell="29"></div>
+                    <div id="local2"></div>
+                    <div id="closed2"></div>
+                </div>
+
+                <div class="game3" id="game3">
+                    <div class="game-item3" id="19" data-sell="31"></div>
+                    <div class="game-item3" id="20" data-sell="32"></div>
+                    <div class="game-item3" id ="21" data-sell="33"></div>
+                    <div class="game-item3" id ="22" data-sell="34"></div>
+                    <div class="game-item3" id="23" data-sell="35"></div>
+                    <div class="game-item3" id="24" data-sell="36"></div>
+                    <div class="game-item3" id="25" data-sell="37"></div>
+                    <div class="game-item3" id="26" data-sell="38"></div>
+                    <div class="game-item3" id="27" data-sell="39"></div>
+                    <div id="local3"></div>
+                    <div id="closed3"></div>
+                </div>
+
+                <div class="game4" id="game4">
+                    <div class="game-item4" id="28" data-sell="41"></div>
+                    <div class="game-item4" id="29" data-sell="42"></div>
+                    <div class="game-item4" id="30" data-sell="43"></div>
+                    <div class="game-item4" id="31" data-sell="44"></div>
+                    <div class="game-item4" id="32" data-sell="45"></div>
+                    <div class="game-item4" id ="33" data-sell="46"></div>
+                    <div class="game-item4" id="34" data-sell="47"></div>
+                    <div class="game-item4" id ="35" data-sell="48"></div>
+                    <div class="game-item4" id="36" data-sell="49"></div>
+                    <div id="local4"></div>
+                    <div id="closed4"></div>
+                </div>
+
+                <div class="game5" id="game5">
+                    <div class="game-item5" id="37" data-sell="51"></div>
+                    <div class="game-item5" id="38" data-sell="52"></div>
+                    <div class="game-item5" id="39" data-sell="53"></div>
+                    <div class="game-item5" id="40" data-sell="54"></div>
+                    <div class="game-item5" id="41" data-sell="55"></div>
+                    <div class="game-item5" id="42" data-sell="56"></div>
+                    <div class="game-item5" id="43" data-sell="57"></div>
+                    <div class="game-item5" id="44" data-sell="58"></div>
+                    <div class="game-item5" id="45" data-sell="59"></div>
+                    <div id="local5"></div>
+                    <div id="closed5"></div>
+                </div>
+
+                <div class="game6" id="game6">
+                    <div class="game-item6" id="46" data-sell="61"></div>
+                    <div class="game-item6" id="47" data-sell="62"></div>
+                    <div class="game-item6" id="48" data-sell="63"></div>
+                    <div class="game-item6" id="49" data-sell="64"></div>
+                    <div class="game-item6" id="50" data-sell="65"></div>
+                    <div class="game-item6" id="51" data-sell="66"></div>
+                    <div class="game-item6" id="52" data-sell="67"></div>
+                    <div class="game-item6" id="53" data-sell="68"></div>
+                    <div class="game-item6" id="54" data-sell="69"></div>
+                    <div id="local6"></div>
+                    <div id="closed6"></div>
+                </div>
+
+                <div class="game7" id="game7">
+                    <div class="game-item7" id="55" data-sell="71"></div>
+                    <div class="game-item7" id="56" data-sell="72"></div>
+                    <div class="game-item7" id="57" data-sell="73"></div>
+                    <div class="game-item7" id="58" data-sell="74"></div>
+                    <div class="game-item7" id="59" data-sell="75"></div>
+                    <div class="game-item7" id="60" data-sell="76"></div>
+                    <div class="game-item7" id="61" data-sell="77"></div>
+                    <div class="game-item7" id="62" data-sell="78"></div>
+                    <div class="game-item7" id="63" data-sell="79"></div>
+                    <div id="local7"></div>
+                    <div id="closed7"></div>
+                </div>
+
+                <div class="game8" id="game8">
+                    <div class="game-item8" id="64" data-sell="81"></div>
+                    <div class="game-item8" id="65" data-sell="82"></div>
+                    <div class="game-item8" id="66" data-sell="83"></div>
+                    <div class="game-item8" id="67" data-sell="84"></div>
+                    <div class="game-item8" id="68" data-sell="85"></div>
+                    <div class="game-item8" id="69" data-sell="86"></div>
+                    <div class="game-item8" id="70" data-sell="87"></div>
+                    <div class="game-item8" id="71" data-sell="88"></div>
+                    <div class="game-item8" id="72" data-sell="89"></div>
+                    <div id="local8"></div>
+                    <div id="closed8"></div>
+                </div>
+
+                <div class="game9" id="game9">
+                    <div class="game-item9" id="73" data-sell="91"></div>
+                    <div class="game-item9" id="74" data-sell="92"></div>
+                    <div class="game-item9" id="75" data-sell="93"></div>
+                    <div class="game-item9" id="76" data-sell="94"></div>
+                    <div class="game-item9" id="77" data-sell="95"></div>
+                    <div class="game-item9" id="78" data-sell="96"></div>
+                    <div class="game-item9" id="79" data-sell="97"></div>
+                    <div class="game-item9" id="80" data-sell="98"></div>
+                    <div class="game-item9" id="81" data-sell="99"></div>
+                    <div id="local9"></div>
+                    <div id="closed9"></div>
+                </div>
+            </div>
+            <button class="reset" id="reset-game">Новая игра</button>
+        </div>
+        <div><button class="rules" id="get-rules">?</button></div>
+        <div class="textWithRules" id="text-rules"><p id="text"></p>
+        <button class="close" id="close-rules">X</button></div>
+    </body>
+</html>
